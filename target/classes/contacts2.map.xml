@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data-map xmlns="http://cayenne.apache.org/schema/3.0/modelMap"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:schemaLocation="http://cayenne.apache.org/schema/3.0/modelMap http://cayenne.apache.org/schema/3.0/modelMap.xsd"
+	 project-version="6">
+	<property name="defaultPackage" value="com.android.forge.contacts2"/>
+	<db-entity name="calls">
+		<db-attribute name="_id" type="INTEGER" isPrimaryKey="true" isGenerated="true" length="2000000000"/>
+		<db-attribute name="city_id" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="cs_local_uuid" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="cs_timestamp" type="INTEGER" isMandatory="true" length="2000000000"/>
+		<db-attribute name="date" type="INTEGER" length="2000000000"/>
+		<db-attribute name="duration" type="INTEGER" length="2000000000"/>
+		<db-attribute name="name" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="new" type="INTEGER" length="2000000000"/>
+		<db-attribute name="number" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="numberlabel" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="numbertype" type="INTEGER" length="2000000000"/>
+		<db-attribute name="raw_contact_id" type="INTEGER" length="2000000000"/>
+		<db-attribute name="type" type="INTEGER" length="2000000000"/>
+	</db-entity>
+	<db-entity name="contacts">
+		<db-attribute name="_id" type="INTEGER" isPrimaryKey="true" isGenerated="true" isMandatory="true" length="2000000000"/>
+		<db-attribute name="custom_ringtone" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="default_action" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="display_name" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="ext_account_Type" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="ext_photo_url" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="has_phone_number" type="INTEGER" isMandatory="true" length="2000000000"/>
+		<db-attribute name="in_visible_group" type="INTEGER" isMandatory="true" length="2000000000"/>
+		<db-attribute name="last_time_contacted" type="INTEGER" length="2000000000"/>
+		<db-attribute name="lookup" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="name_raw_contact_id" type="INTEGER" length="2000000000"/>
+		<db-attribute name="photo_id" type="INTEGER" length="2000000000"/>
+		<db-attribute name="send_to_voicemail" type="INTEGER" isMandatory="true" length="2000000000"/>
+		<db-attribute name="single_is_restricted" type="INTEGER" isMandatory="true" length="2000000000"/>
+		<db-attribute name="starred" type="INTEGER" isMandatory="true" length="2000000000"/>
+		<db-attribute name="status_update_id" type="INTEGER" length="2000000000"/>
+		<db-attribute name="times_contacted" type="INTEGER" isMandatory="true" length="2000000000"/>
+		<db-attribute name="vip" type="INTEGER" isMandatory="true" length="2000000000"/>
+	</db-entity>
+	<db-entity name="data">
+		<db-attribute name="_id" type="INTEGER" isPrimaryKey="true" isGenerated="true" isMandatory="true" length="2000000000"/>
+		<db-attribute name="data1" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="data10" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="data11" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="data12" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="data13" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="data14" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="data15" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="data2" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="data3" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="data4" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="data5" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="data6" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="data7" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="data8" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="data9" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="data_sync1" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="data_sync2" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="data_sync3" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="data_sync4" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="data_version" type="INTEGER" isMandatory="true" length="2000000000"/>
+		<db-attribute name="is_primary" type="INTEGER" isMandatory="true" length="2000000000"/>
+		<db-attribute name="is_super_primary" type="INTEGER" isMandatory="true" length="2000000000"/>
+		<db-attribute name="mimetype_id" type="INTEGER" isMandatory="true" length="2000000000"/>
+		<db-attribute name="package_id" type="INTEGER" length="2000000000"/>
+		<db-attribute name="raw_contact_id" type="INTEGER" isMandatory="true" length="2000000000"/>
+	</db-entity>
+	<db-entity name="mimetypes">
+		<db-attribute name="_id" type="INTEGER" isPrimaryKey="true" isGenerated="true" isMandatory="true" length="2000000000"/>
+		<db-attribute name="mimetype" type="VARCHAR" isMandatory="true" length="2000000000"/>
+	</db-entity>
+	<db-entity name="packages">
+		<db-attribute name="_id" type="INTEGER" isPrimaryKey="true" isGenerated="true" isMandatory="true" length="2000000000"/>
+		<db-attribute name="package" type="VARCHAR" isMandatory="true" length="2000000000"/>
+	</db-entity>
+	<db-entity name="phone_lookup">
+		<db-attribute name="data_id" type="INTEGER" isPrimaryKey="true" isGenerated="true" isMandatory="true" length="2000000000"/>
+		<db-attribute name="min_match" type="VARCHAR" isMandatory="true" length="2000000000"/>
+		<db-attribute name="normalized_number" type="VARCHAR" isMandatory="true" length="2000000000"/>
+		<db-attribute name="raw_contact_id" type="INTEGER" isMandatory="true" length="2000000000"/>
+	</db-entity>
+	<db-entity name="raw_contacts">
+		<db-attribute name="_id" type="INTEGER" isPrimaryKey="true" isGenerated="true" isMandatory="true" length="2000000000"/>
+		<db-attribute name="account_name" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="account_type" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="aggregation_mode" type="INTEGER" isMandatory="true" length="2000000000"/>
+		<db-attribute name="aggregation_needed" type="INTEGER" isMandatory="true" length="2000000000"/>
+		<db-attribute name="contact_id" type="INTEGER" length="2000000000"/>
+		<db-attribute name="contact_in_visible_group" type="INTEGER" isMandatory="true" length="2000000000"/>
+		<db-attribute name="custom_ringtone" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="deleted" type="INTEGER" isMandatory="true" length="2000000000"/>
+		<db-attribute name="dirty" type="INTEGER" isMandatory="true" length="2000000000"/>
+		<db-attribute name="display_name" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="display_name_alt" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="display_name_source" type="INTEGER" isMandatory="true" length="2000000000"/>
+		<db-attribute name="is_restricted" type="INTEGER" length="2000000000"/>
+		<db-attribute name="last_time_contacted" type="INTEGER" length="2000000000"/>
+		<db-attribute name="name_verified" type="INTEGER" isMandatory="true" length="2000000000"/>
+		<db-attribute name="phonetic_name" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="phonetic_name_style" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="send_to_voicemail" type="INTEGER" isMandatory="true" length="2000000000"/>
+		<db-attribute name="sort_key" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="sort_key_alt" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="sourceid" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="starred" type="INTEGER" isMandatory="true" length="2000000000"/>
+		<db-attribute name="sync1" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="sync2" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="sync3" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="sync4" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="times_contacted" type="INTEGER" isMandatory="true" length="2000000000"/>
+		<db-attribute name="version" type="INTEGER" isMandatory="true" length="2000000000"/>
+		<db-attribute name="vip" type="INTEGER" isMandatory="true" length="2000000000"/>
+	</db-entity>
+	<obj-entity name="Calls" className="com.android.forge.contacts2.Calls" dbEntityName="calls">
+		<obj-attribute name="cityId" type="java.lang.String" db-attribute-path="city_id"/>
+		<obj-attribute name="csLocalUuid" type="java.lang.String" db-attribute-path="cs_local_uuid"/>
+		<obj-attribute name="csTimestamp" type="java.lang.Integer" db-attribute-path="cs_timestamp"/>
+		<obj-attribute name="date" type="java.lang.Long" db-attribute-path="date"/>
+		<obj-attribute name="duration" type="java.lang.Integer" db-attribute-path="duration"/>
+		<obj-attribute name="name" type="java.lang.String" db-attribute-path="name"/>
+		<obj-attribute name="new" type="java.lang.Integer" db-attribute-path="new"/>
+		<obj-attribute name="number" type="java.lang.String" db-attribute-path="number"/>
+		<obj-attribute name="numberlabel" type="java.lang.String" db-attribute-path="numberlabel"/>
+		<obj-attribute name="numbertype" type="java.lang.Integer" db-attribute-path="numbertype"/>
+		<obj-attribute name="rawContactId" type="java.lang.Integer" db-attribute-path="raw_contact_id"/>
+		<obj-attribute name="type" type="java.lang.Integer" db-attribute-path="type"/>
+	</obj-entity>
+	<obj-entity name="Contacts" className="com.android.forge.contacts2.Contacts" dbEntityName="contacts">
+		<obj-attribute name="customRingtone" type="java.lang.String" db-attribute-path="custom_ringtone"/>
+		<obj-attribute name="defaultAction" type="java.lang.String" db-attribute-path="default_action"/>
+		<obj-attribute name="displayName" type="java.lang.String" db-attribute-path="display_name"/>
+		<obj-attribute name="extAccountType" type="java.lang.String" db-attribute-path="ext_account_Type"/>
+		<obj-attribute name="extPhotoUrl" type="java.lang.String" db-attribute-path="ext_photo_url"/>
+		<obj-attribute name="hasPhoneNumber" type="java.lang.Integer" db-attribute-path="has_phone_number"/>
+		<obj-attribute name="inVisibleGroup" type="java.lang.Integer" db-attribute-path="in_visible_group"/>
+		<obj-attribute name="lastTimeContacted" type="java.lang.Integer" db-attribute-path="last_time_contacted"/>
+		<obj-attribute name="lookup" type="java.lang.String" db-attribute-path="lookup"/>
+		<obj-attribute name="photoId" type="java.lang.Integer" db-attribute-path="photo_id"/>
+		<obj-attribute name="sendToVoicemail" type="java.lang.Integer" db-attribute-path="send_to_voicemail"/>
+		<obj-attribute name="singleIsRestricted" type="java.lang.Integer" db-attribute-path="single_is_restricted"/>
+		<obj-attribute name="starred" type="java.lang.Integer" db-attribute-path="starred"/>
+		<obj-attribute name="statusUpdateId" type="java.lang.Integer" db-attribute-path="status_update_id"/>
+		<obj-attribute name="timesContacted" type="java.lang.Integer" db-attribute-path="times_contacted"/>
+		<obj-attribute name="vip" type="java.lang.Integer" db-attribute-path="vip"/>
+	</obj-entity>
+	<obj-entity name="Data" className="com.android.forge.contacts2.Data" dbEntityName="data">
+		<obj-attribute name="data1" type="java.lang.String" db-attribute-path="data1"/>
+		<obj-attribute name="data10" type="java.lang.String" db-attribute-path="data10"/>
+		<obj-attribute name="data11" type="java.lang.String" db-attribute-path="data11"/>
+		<obj-attribute name="data12" type="java.lang.String" db-attribute-path="data12"/>
+		<obj-attribute name="data13" type="java.lang.String" db-attribute-path="data13"/>
+		<obj-attribute name="data14" type="java.lang.String" db-attribute-path="data14"/>
+		<obj-attribute name="data15" type="java.lang.String" db-attribute-path="data15"/>
+		<obj-attribute name="data2" type="java.lang.String" db-attribute-path="data2"/>
+		<obj-attribute name="data3" type="java.lang.String" db-attribute-path="data3"/>
+		<obj-attribute name="data4" type="java.lang.String" db-attribute-path="data4"/>
+		<obj-attribute name="data5" type="java.lang.String" db-attribute-path="data5"/>
+		<obj-attribute name="data6" type="java.lang.String" db-attribute-path="data6"/>
+		<obj-attribute name="data7" type="java.lang.String" db-attribute-path="data7"/>
+		<obj-attribute name="data8" type="java.lang.String" db-attribute-path="data8"/>
+		<obj-attribute name="data9" type="java.lang.String" db-attribute-path="data9"/>
+		<obj-attribute name="dataSync1" type="java.lang.String" db-attribute-path="data_sync1"/>
+		<obj-attribute name="dataSync2" type="java.lang.String" db-attribute-path="data_sync2"/>
+		<obj-attribute name="dataSync3" type="java.lang.String" db-attribute-path="data_sync3"/>
+		<obj-attribute name="dataSync4" type="java.lang.String" db-attribute-path="data_sync4"/>
+		<obj-attribute name="dataVersion" type="java.lang.Integer" db-attribute-path="data_version"/>
+		<obj-attribute name="isPrimary" type="java.lang.Integer" db-attribute-path="is_primary"/>
+		<obj-attribute name="isSuperPrimary" type="java.lang.Integer" db-attribute-path="is_super_primary"/>
+	</obj-entity>
+	<obj-entity name="Mimetypes" className="com.android.forge.contacts2.Mimetypes" dbEntityName="mimetypes">
+		<obj-attribute name="mimetype" type="java.lang.String" db-attribute-path="mimetype"/>
+	</obj-entity>
+	<obj-entity name="Packages" className="com.android.forge.contacts2.Packages" dbEntityName="packages">
+		<obj-attribute name="package" type="java.lang.String" db-attribute-path="package"/>
+	</obj-entity>
+	<obj-entity name="PhoneLookup" className="com.android.forge.contacts2.PhoneLookup" dbEntityName="phone_lookup">
+		<obj-attribute name="minMatch" type="java.lang.String" db-attribute-path="min_match"/>
+		<obj-attribute name="normalizedNumber" type="java.lang.String" db-attribute-path="normalized_number"/>
+	</obj-entity>
+	<obj-entity name="RawContacts" className="com.android.forge.contacts2.RawContacts" dbEntityName="raw_contacts">
+		<obj-attribute name="accountName" type="java.lang.String" db-attribute-path="account_name"/>
+		<obj-attribute name="accountType" type="java.lang.String" db-attribute-path="account_type"/>
+		<obj-attribute name="aggregationMode" type="java.lang.Integer" db-attribute-path="aggregation_mode"/>
+		<obj-attribute name="aggregationNeeded" type="java.lang.Integer" db-attribute-path="aggregation_needed"/>
+		<obj-attribute name="contactInVisibleGroup" type="java.lang.Integer" db-attribute-path="contact_in_visible_group"/>
+		<obj-attribute name="customRingtone" type="java.lang.String" db-attribute-path="custom_ringtone"/>
+		<obj-attribute name="deleted" type="java.lang.Integer" db-attribute-path="deleted"/>
+		<obj-attribute name="dirty" type="java.lang.Integer" db-attribute-path="dirty"/>
+		<obj-attribute name="displayName" type="java.lang.String" db-attribute-path="display_name"/>
+		<obj-attribute name="displayNameAlt" type="java.lang.String" db-attribute-path="display_name_alt"/>
+		<obj-attribute name="displayNameSource" type="java.lang.Integer" db-attribute-path="display_name_source"/>
+		<obj-attribute name="isRestricted" type="java.lang.Integer" db-attribute-path="is_restricted"/>
+		<obj-attribute name="lastTimeContacted" type="java.lang.Integer" db-attribute-path="last_time_contacted"/>
+		<obj-attribute name="nameVerified" type="java.lang.Integer" db-attribute-path="name_verified"/>
+		<obj-attribute name="phoneticName" type="java.lang.String" db-attribute-path="phonetic_name"/>
+		<obj-attribute name="phoneticNameStyle" type="java.lang.String" db-attribute-path="phonetic_name_style"/>
+		<obj-attribute name="sendToVoicemail" type="java.lang.Integer" db-attribute-path="send_to_voicemail"/>
+		<obj-attribute name="sortKey" type="java.lang.String" db-attribute-path="sort_key"/>
+		<obj-attribute name="sortKeyAlt" type="java.lang.String" db-attribute-path="sort_key_alt"/>
+		<obj-attribute name="sourceid" type="java.lang.String" db-attribute-path="sourceid"/>
+		<obj-attribute name="starred" type="java.lang.Integer" db-attribute-path="starred"/>
+		<obj-attribute name="sync1" type="java.lang.String" db-attribute-path="sync1"/>
+		<obj-attribute name="sync2" type="java.lang.String" db-attribute-path="sync2"/>
+		<obj-attribute name="sync3" type="java.lang.String" db-attribute-path="sync3"/>
+		<obj-attribute name="sync4" type="java.lang.String" db-attribute-path="sync4"/>
+		<obj-attribute name="timesContacted" type="java.lang.Integer" db-attribute-path="times_contacted"/>
+		<obj-attribute name="version" type="java.lang.Integer" db-attribute-path="version"/>
+		<obj-attribute name="vip" type="java.lang.Integer" db-attribute-path="vip"/>
+	</obj-entity>
+	<db-relationship name="RawContact" source="contacts" target="raw_contacts" toMany="false">
+		<db-attribute-pair source="name_raw_contact_id" target="_id"/>
+		<db-attribute-pair source="_id" target="contact_id"/>
+	</db-relationship>
+	<db-relationship name="Mimetype" source="data" target="mimetypes" toMany="false">
+		<db-attribute-pair source="mimetype_id" target="_id"/>
+	</db-relationship>
+	<db-relationship name="Packages" source="data" target="packages" toMany="false">
+		<db-attribute-pair source="package_id" target="_id"/>
+	</db-relationship>
+	<db-relationship name="PhoneLookup" source="data" target="phone_lookup" toMany="true">
+		<db-attribute-pair source="_id" target="data_id"/>
+	</db-relationship>
+	<db-relationship name="RawContacts" source="data" target="raw_contacts" toMany="false">
+		<db-attribute-pair source="raw_contact_id" target="_id"/>
+	</db-relationship>
+	<db-relationship name="Data" source="mimetypes" target="data" toMany="true">
+		<db-attribute-pair source="_id" target="mimetype_id"/>
+	</db-relationship>
+	<db-relationship name="Data" source="packages" target="data" toMany="true">
+		<db-attribute-pair source="_id" target="package_id"/>
+	</db-relationship>
+	<db-relationship name="Data" source="phone_lookup" target="data" toMany="false">
+		<db-attribute-pair source="data_id" target="_id"/>
+	</db-relationship>
+	<db-relationship name="RawContact" source="phone_lookup" target="raw_contacts" toMany="false">
+		<db-attribute-pair source="raw_contact_id" target="_id"/>
+	</db-relationship>
+	<db-relationship name="Contact" source="raw_contacts" target="contacts" toMany="false">
+		<db-attribute-pair source="_id" target="name_raw_contact_id"/>
+		<db-attribute-pair source="contact_id" target="_id"/>
+	</db-relationship>
+	<db-relationship name="Data" source="raw_contacts" target="data" toMany="true">
+		<db-attribute-pair source="_id" target="raw_contact_id"/>
+	</db-relationship>
+	<db-relationship name="PhoneLookup" source="raw_contacts" target="phone_lookup" toMany="true">
+		<db-attribute-pair source="_id" target="raw_contact_id"/>
+	</db-relationship>
+	<obj-relationship name="rawContact" source="Contacts" target="RawContacts" deleteRule="Nullify" db-relationship-path="RawContact"/>
+	<obj-relationship name="Mimetype" source="Data" target="Mimetypes" deleteRule="Nullify" db-relationship-path="Mimetype"/>
+	<obj-relationship name="Package" source="Data" target="Packages" deleteRule="Nullify" db-relationship-path="Packages"/>
+	<obj-relationship name="PhoneLookup" source="Data" target="PhoneLookup" deleteRule="Deny" db-relationship-path="PhoneLookup"/>
+	<obj-relationship name="rawContacts" source="Data" target="RawContacts" deleteRule="Nullify" db-relationship-path="RawContacts"/>
+	<obj-relationship name="Data" source="Mimetypes" target="Data" deleteRule="Deny" db-relationship-path="Data"/>
+	<obj-relationship name="Data" source="Packages" target="Data" deleteRule="Deny" db-relationship-path="Data"/>
+	<obj-relationship name="Data" source="PhoneLookup" target="Data" deleteRule="Nullify" db-relationship-path="Data"/>
+	<obj-relationship name="rawContact" source="PhoneLookup" target="RawContacts" deleteRule="Nullify" db-relationship-path="RawContact"/>
+	<obj-relationship name="contact" source="RawContacts" target="Contacts" deleteRule="Nullify" db-relationship-path="Contact"/>
+	<obj-relationship name="data" source="RawContacts" target="Data" deleteRule="Deny" db-relationship-path="Data"/>
+	<obj-relationship name="phoneLookup" source="RawContacts" target="PhoneLookup" deleteRule="Deny" db-relationship-path="PhoneLookup"/>
+</data-map>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data-map xmlns="http://cayenne.apache.org/schema/3.0/modelMap"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:schemaLocation="http://cayenne.apache.org/schema/3.0/modelMap http://cayenne.apache.org/schema/3.0/modelMap.xsd"
+	 project-version="6">
+	<property name="defaultPackage" value="com.android.forge.randomnames"/>
+	<db-entity name="fakenames">
+		<db-attribute name="ID" type="INTEGER" isPrimaryKey="true" isMandatory="true" length="2000000000"/>
+		<db-attribute name="birthday" type="VARCHAR" isMandatory="true" length="2000000000"/>
+		<db-attribute name="city" type="VARCHAR" isMandatory="true" length="2000000000"/>
+		<db-attribute name="company" type="VARCHAR" isMandatory="true" length="2000000000"/>
+		<db-attribute name="emailaddress" type="VARCHAR" isMandatory="true" length="2000000000"/>
+		<db-attribute name="givenname" type="VARCHAR" isMandatory="true" length="2000000000"/>
+		<db-attribute name="state" type="VARCHAR" isMandatory="true" length="2000000000"/>
+		<db-attribute name="streetaddress" type="VARCHAR" isMandatory="true" length="2000000000"/>
+		<db-attribute name="surname" type="VARCHAR" isMandatory="true" length="2000000000"/>
+		<db-attribute name="telephonenumber" type="VARCHAR" isMandatory="true" length="2000000000"/>
+		<db-attribute name="zipcode" type="VARCHAR" isMandatory="true" length="2000000000"/>
+	</db-entity>
+	<obj-entity name="Fakenames" className="com.android.forge.randomnames.Fakenames" dbEntityName="fakenames">
+		<obj-attribute name="birthday" type="java.lang.String" db-attribute-path="birthday"/>
+		<obj-attribute name="city" type="java.lang.String" db-attribute-path="city"/>
+		<obj-attribute name="company" type="java.lang.String" db-attribute-path="company"/>
+		<obj-attribute name="emailaddress" type="java.lang.String" db-attribute-path="emailaddress"/>
+		<obj-attribute name="givenname" type="java.lang.String" db-attribute-path="givenname"/>
+		<obj-attribute name="id" type="java.lang.Integer" db-attribute-path="ID"/>
+		<obj-attribute name="state" type="java.lang.String" db-attribute-path="state"/>
+		<obj-attribute name="streetaddress" type="java.lang.String" db-attribute-path="streetaddress"/>
+		<obj-attribute name="surname" type="java.lang.String" db-attribute-path="surname"/>
+		<obj-attribute name="telephonenumber" type="java.lang.String" db-attribute-path="telephonenumber"/>
+		<obj-attribute name="zipcode" type="java.lang.String" db-attribute-path="zipcode"/>
+	</obj-entity>
+</data-map>

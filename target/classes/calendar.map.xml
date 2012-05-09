@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data-map xmlns="http://cayenne.apache.org/schema/3.0/modelMap"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:schemaLocation="http://cayenne.apache.org/schema/3.0/modelMap http://cayenne.apache.org/schema/3.0/modelMap.xsd"
+	 project-version="6">
+	<property name="defaultPackage" value="com.android.forge.calendar"/>
+	<db-entity name="Attendees">
+		<db-attribute name="_id" type="INTEGER" isPrimaryKey="true" isGenerated="true" length="2000000000"/>
+		<db-attribute name="attendeeEmail" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="attendeeName" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="attendeeRelationship" type="INTEGER" length="2000000000"/>
+		<db-attribute name="attendeeStatus" type="INTEGER" length="2000000000"/>
+		<db-attribute name="attendeeType" type="INTEGER" length="2000000000"/>
+		<db-attribute name="event_id" type="INTEGER" length="2000000000"/>
+	</db-entity>
+	<db-entity name="CalendarAlerts">
+		<db-attribute name="_id" type="INTEGER" isPrimaryKey="true" isGenerated="true" length="2000000000"/>
+		<db-attribute name="alarmTime" type="INTEGER" isMandatory="true" length="2000000000"/>
+		<db-attribute name="begin" type="INTEGER" isMandatory="true" length="2000000000"/>
+		<db-attribute name="creationTime" type="INTEGER" isMandatory="true" length="2000000000"/>
+		<db-attribute name="end" type="INTEGER" isMandatory="true" length="2000000000"/>
+		<db-attribute name="event_id" type="INTEGER" length="2000000000"/>
+		<db-attribute name="minutes" type="INTEGER" length="2000000000"/>
+		<db-attribute name="notifyTime" type="INTEGER" isMandatory="true" length="2000000000"/>
+		<db-attribute name="receivedTime" type="INTEGER" isMandatory="true" length="2000000000"/>
+		<db-attribute name="state" type="INTEGER" isMandatory="true" length="2000000000"/>
+	</db-entity>
+	<db-entity name="CalendarSmsAlerts">
+		<db-attribute name="_id" type="INTEGER" isPrimaryKey="true" isGenerated="true" length="2000000000"/>
+		<db-attribute name="alarmTime" type="INTEGER" isMandatory="true" length="2000000000"/>
+		<db-attribute name="begin" type="INTEGER" isMandatory="true" length="2000000000"/>
+		<db-attribute name="creationTime" type="INTEGER" isMandatory="true" length="2000000000"/>
+		<db-attribute name="end" type="INTEGER" isMandatory="true" length="2000000000"/>
+		<db-attribute name="event_id" type="INTEGER" length="2000000000"/>
+		<db-attribute name="minutes" type="INTEGER" length="2000000000"/>
+		<db-attribute name="notifyTime" type="INTEGER" isMandatory="true" length="2000000000"/>
+		<db-attribute name="receivedTime" type="INTEGER" isMandatory="true" length="2000000000"/>
+		<db-attribute name="state" type="INTEGER" isMandatory="true" length="2000000000"/>
+	</db-entity>
+	<db-entity name="Calendars">
+		<db-attribute name="_id" type="INTEGER" isPrimaryKey="true" isGenerated="true" length="2000000000"/>
+		<db-attribute name="_sync_account" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="_sync_account_type" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="_sync_dirty" type="INTEGER" length="2000000000"/>
+		<db-attribute name="_sync_id" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="_sync_local_id" type="INTEGER" length="2000000000"/>
+		<db-attribute name="_sync_mark" type="INTEGER" length="2000000000"/>
+		<db-attribute name="_sync_time" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="_sync_version" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="access_level" type="INTEGER" length="2000000000"/>
+		<db-attribute name="alerts_ringtone" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="alerts_vibrate" type="INTEGER" isMandatory="true" length="2000000000"/>
+		<db-attribute name="color" type="INTEGER" length="2000000000"/>
+		<db-attribute name="detailed_view" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="displayName" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="displayOrder" type="INTEGER" length="2000000000"/>
+		<db-attribute name="hidden" type="INTEGER" isMandatory="true" length="2000000000"/>
+		<db-attribute name="hide_declined" type="INTEGER" isMandatory="true" length="2000000000"/>
+		<db-attribute name="location" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="name" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="organizerCanRespond" type="INTEGER" isMandatory="true" length="2000000000"/>
+		<db-attribute name="ownerAccount" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="reminder_duration" type="INTEGER" isMandatory="true" length="2000000000"/>
+		<db-attribute name="reminder_type" type="INTEGER" isMandatory="true" length="2000000000"/>
+		<db-attribute name="selected" type="INTEGER" isMandatory="true" length="2000000000"/>
+		<db-attribute name="start_view" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="sync_events" type="INTEGER" isMandatory="true" length="2000000000"/>
+		<db-attribute name="sync_source" type="INTEGER" isMandatory="true" length="2000000000"/>
+		<db-attribute name="timezone" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="url" type="VARCHAR" length="2000000000"/>
+	</db-entity>
+	<db-entity name="Events">
+		<db-attribute name="MeetingStatus" type="INTEGER" isMandatory="true" length="2000000000"/>
+		<db-attribute name="_id" type="INTEGER" isPrimaryKey="true" isGenerated="true" length="2000000000"/>
+		<db-attribute name="_sync_account" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="_sync_account_type" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="_sync_dirty" type="INTEGER" length="2000000000"/>
+		<db-attribute name="_sync_id" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="_sync_local_id" type="INTEGER" length="2000000000"/>
+		<db-attribute name="_sync_mark" type="INTEGER" length="2000000000"/>
+		<db-attribute name="_sync_time" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="_sync_version" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="allDay" type="INTEGER" isMandatory="true" length="2000000000"/>
+		<db-attribute name="calendar_id" type="INTEGER" isMandatory="true" length="2000000000"/>
+		<db-attribute name="commentsUri" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="deleted" type="INTEGER" isMandatory="true" length="2000000000"/>
+		<db-attribute name="description" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="dtend" type="INTEGER" length="2000000000"/>
+		<db-attribute name="dtend2" type="INTEGER" length="2000000000"/>
+		<db-attribute name="dtstart" type="INTEGER" length="2000000000"/>
+		<db-attribute name="dtstart2" type="INTEGER" length="2000000000"/>
+		<db-attribute name="duration" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="eventLocation" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="eventStatus" type="INTEGER" length="2000000000"/>
+		<db-attribute name="eventTimezone" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="eventTimezone2" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="exdate" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="exrule" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="facebook_avatar_large" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="facebook_avatar_local" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="facebook_avatar_small" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="facebook_source_id" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="facebook_type" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="guestsCanInviteOthers" type="INTEGER" isMandatory="true" length="2000000000"/>
+		<db-attribute name="guestsCanModify" type="INTEGER" isMandatory="true" length="2000000000"/>
+		<db-attribute name="guestsCanSeeGuests" type="INTEGER" isMandatory="true" length="2000000000"/>
+		<db-attribute name="hasAlarm" type="INTEGER" isMandatory="true" length="2000000000"/>
+		<db-attribute name="hasAttendeeData" type="INTEGER" isMandatory="true" length="2000000000"/>
+		<db-attribute name="hasExtendedProperties" type="INTEGER" isMandatory="true" length="2000000000"/>
+		<db-attribute name="htmlUri" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="iCalGUID" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="importance" type="INTEGER" isMandatory="true" length="2000000000"/>
+		<db-attribute name="lastDate" type="INTEGER" length="2000000000"/>
+		<db-attribute name="last_update_time" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="organizer" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="originalAllDay" type="INTEGER" length="2000000000"/>
+		<db-attribute name="originalEvent" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="originalInstanceTime" type="INTEGER" length="2000000000"/>
+		<db-attribute name="parentID" type="INTEGER" length="2000000000"/>
+		<db-attribute name="rdate" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="rrule" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="selfAttendeeStatus" type="INTEGER" isMandatory="true" length="2000000000"/>
+		<db-attribute name="syncAdapterData" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="title" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="transparency" type="INTEGER" isMandatory="true" length="2000000000"/>
+		<db-attribute name="visibility" type="INTEGER" isMandatory="true" length="2000000000"/>
+	</db-entity>
+	<db-entity name="EventsRawTimes">
+		<db-attribute name="_id" type="INTEGER" isPrimaryKey="true" isGenerated="true" length="2000000000"/>
+		<db-attribute name="dtend2445" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="dtstart2445" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="event_id" type="INTEGER" isMandatory="true" length="2000000000"/>
+		<db-attribute name="lastDate2445" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="originalInstanceTime2445" type="VARCHAR" length="2000000000"/>
+	</db-entity>
+	<db-entity name="ExtendedProperties">
+		<db-attribute name="_id" type="INTEGER" isPrimaryKey="true" isGenerated="true" length="2000000000"/>
+		<db-attribute name="event_id" type="INTEGER" length="2000000000"/>
+		<db-attribute name="name" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="value" type="VARCHAR" length="2000000000"/>
+	</db-entity>
+	<db-entity name="Instances">
+		<db-attribute name="_id" type="INTEGER" isPrimaryKey="true" isGenerated="true" length="2000000000"/>
+		<db-attribute name="begin" type="INTEGER" length="2000000000"/>
+		<db-attribute name="end" type="INTEGER" length="2000000000"/>
+		<db-attribute name="endDay" type="INTEGER" length="2000000000"/>
+		<db-attribute name="endMinute" type="INTEGER" length="2000000000"/>
+		<db-attribute name="event_id" type="INTEGER" length="2000000000"/>
+		<db-attribute name="startDay" type="INTEGER" length="2000000000"/>
+		<db-attribute name="startMinute" type="INTEGER" length="2000000000"/>
+	</db-entity>
+	<db-entity name="Reminders">
+		<db-attribute name="_id" type="INTEGER" isPrimaryKey="true" isGenerated="true" length="2000000000"/>
+		<db-attribute name="event_id" type="INTEGER" length="2000000000"/>
+		<db-attribute name="method" type="INTEGER" isMandatory="true" length="2000000000"/>
+		<db-attribute name="minutes" type="INTEGER" length="2000000000"/>
+	</db-entity>
+	<obj-entity name="Attendees" className="com.android.forge.calendar.Attendees" dbEntityName="Attendees">
+		<obj-attribute name="attendeeEmail" type="java.lang.String" db-attribute-path="attendeeEmail"/>
+		<obj-attribute name="attendeeName" type="java.lang.String" db-attribute-path="attendeeName"/>
+		<obj-attribute name="attendeeRelationship" type="java.lang.Integer" db-attribute-path="attendeeRelationship"/>
+		<obj-attribute name="attendeeStatus" type="java.lang.Integer" db-attribute-path="attendeeStatus"/>
+		<obj-attribute name="attendeeType" type="java.lang.Integer" db-attribute-path="attendeeType"/>
+	</obj-entity>
+	<obj-entity name="CalendarAlerts" className="com.android.forge.calendar.CalendarAlerts" dbEntityName="CalendarAlerts">
+		<obj-attribute name="alarmTime" type="java.lang.Integer" db-attribute-path="alarmTime"/>
+		<obj-attribute name="begin" type="java.lang.Integer" db-attribute-path="begin"/>
+		<obj-attribute name="creationTime" type="java.lang.Integer" db-attribute-path="creationTime"/>
+		<obj-attribute name="end" type="java.lang.Integer" db-attribute-path="end"/>
+		<obj-attribute name="minutes" type="java.lang.Integer" db-attribute-path="minutes"/>
+		<obj-attribute name="notifyTime" type="java.lang.Integer" db-attribute-path="notifyTime"/>
+		<obj-attribute name="receivedTime" type="java.lang.Integer" db-attribute-path="receivedTime"/>
+		<obj-attribute name="state" type="java.lang.Integer" db-attribute-path="state"/>
+	</obj-entity>
+	<obj-entity name="CalendarSmsAlerts" className="com.android.forge.calendar.CalendarSmsAlerts" dbEntityName="CalendarSmsAlerts">
+		<obj-attribute name="alarmTime" type="java.lang.Integer" db-attribute-path="alarmTime"/>
+		<obj-attribute name="begin" type="java.lang.Integer" db-attribute-path="begin"/>
+		<obj-attribute name="creationTime" type="java.lang.Integer" db-attribute-path="creationTime"/>
+		<obj-attribute name="end" type="java.lang.Integer" db-attribute-path="end"/>
+		<obj-attribute name="minutes" type="java.lang.Integer" db-attribute-path="minutes"/>
+		<obj-attribute name="notifyTime" type="java.lang.Integer" db-attribute-path="notifyTime"/>
+		<obj-attribute name="receivedTime" type="java.lang.Integer" db-attribute-path="receivedTime"/>
+		<obj-attribute name="state" type="java.lang.Integer" db-attribute-path="state"/>
+	</obj-entity>
+	<obj-entity name="Calendars" className="com.android.forge.calendar.Calendars" dbEntityName="Calendars">
+		<obj-attribute name="accessLevel" type="java.lang.Integer" db-attribute-path="access_level"/>
+		<obj-attribute name="alertsRingtone" type="java.lang.String" db-attribute-path="alerts_ringtone"/>
+		<obj-attribute name="alertsVibrate" type="java.lang.Integer" db-attribute-path="alerts_vibrate"/>
+		<obj-attribute name="color" type="java.lang.Integer" db-attribute-path="color"/>
+		<obj-attribute name="detailedView" type="java.lang.String" db-attribute-path="detailed_view"/>
+		<obj-attribute name="displayName" type="java.lang.String" db-attribute-path="displayName"/>
+		<obj-attribute name="displayOrder" type="java.lang.Integer" db-attribute-path="displayOrder"/>
+		<obj-attribute name="hidden" type="java.lang.Integer" db-attribute-path="hidden"/>
+		<obj-attribute name="hideDeclined" type="java.lang.Integer" db-attribute-path="hide_declined"/>
+		<obj-attribute name="location" type="java.lang.String" db-attribute-path="location"/>
+		<obj-attribute name="name" type="java.lang.String" db-attribute-path="name"/>
+		<obj-attribute name="organizerCanRespond" type="java.lang.Integer" db-attribute-path="organizerCanRespond"/>
+		<obj-attribute name="ownerAccount" type="java.lang.String" db-attribute-path="ownerAccount"/>
+		<obj-attribute name="reminderDuration" type="java.lang.Integer" db-attribute-path="reminder_duration"/>
+		<obj-attribute name="reminderType" type="java.lang.Integer" db-attribute-path="reminder_type"/>
+		<obj-attribute name="selected" type="java.lang.Integer" db-attribute-path="selected"/>
+		<obj-attribute name="startView" type="java.lang.String" db-attribute-path="start_view"/>
+		<obj-attribute name="syncAccount" type="java.lang.String" db-attribute-path="_sync_account"/>
+		<obj-attribute name="syncAccountType" type="java.lang.String" db-attribute-path="_sync_account_type"/>
+		<obj-attribute name="syncDirty" type="java.lang.Integer" db-attribute-path="_sync_dirty"/>
+		<obj-attribute name="syncEvents" type="java.lang.Integer" db-attribute-path="sync_events"/>
+		<obj-attribute name="syncId" type="java.lang.String" db-attribute-path="_sync_id"/>
+		<obj-attribute name="syncLocalId" type="java.lang.Integer" db-attribute-path="_sync_local_id"/>
+		<obj-attribute name="syncMark" type="java.lang.Integer" db-attribute-path="_sync_mark"/>
+		<obj-attribute name="syncSource" type="java.lang.Integer" db-attribute-path="sync_source"/>
+		<obj-attribute name="syncTime" type="java.lang.String" db-attribute-path="_sync_time"/>
+		<obj-attribute name="syncVersion" type="java.lang.String" db-attribute-path="_sync_version"/>
+		<obj-attribute name="timezone" type="java.lang.String" db-attribute-path="timezone"/>
+		<obj-attribute name="url" type="java.lang.String" db-attribute-path="url"/>
+	</obj-entity>
+	<obj-entity name="Events" className="com.android.forge.calendar.Events" dbEntityName="Events">
+		<obj-attribute name="allDay" type="java.lang.Integer" db-attribute-path="allDay"/>
+		<obj-attribute name="commentsUri" type="java.lang.String" db-attribute-path="commentsUri"/>
+		<obj-attribute name="deleted" type="java.lang.Integer" db-attribute-path="deleted"/>
+		<obj-attribute name="description" type="java.lang.String" db-attribute-path="description"/>
+		<obj-attribute name="dtend" type="java.lang.Integer" db-attribute-path="dtend"/>
+		<obj-attribute name="dtend2" type="java.lang.Integer" db-attribute-path="dtend2"/>
+		<obj-attribute name="dtstart" type="java.lang.Integer" db-attribute-path="dtstart"/>
+		<obj-attribute name="dtstart2" type="java.lang.Integer" db-attribute-path="dtstart2"/>
+		<obj-attribute name="duration" type="java.lang.String" db-attribute-path="duration"/>
+		<obj-attribute name="eventLocation" type="java.lang.String" db-attribute-path="eventLocation"/>
+		<obj-attribute name="eventStatus" type="java.lang.Integer" db-attribute-path="eventStatus"/>
+		<obj-attribute name="eventTimezone" type="java.lang.String" db-attribute-path="eventTimezone"/>
+		<obj-attribute name="eventTimezone2" type="java.lang.String" db-attribute-path="eventTimezone2"/>
+		<obj-attribute name="exdate" type="java.lang.String" db-attribute-path="exdate"/>
+		<obj-attribute name="exrule" type="java.lang.String" db-attribute-path="exrule"/>
+		<obj-attribute name="facebookAvatarLarge" type="java.lang.String" db-attribute-path="facebook_avatar_large"/>
+		<obj-attribute name="facebookAvatarLocal" type="java.lang.String" db-attribute-path="facebook_avatar_local"/>
+		<obj-attribute name="facebookAvatarSmall" type="java.lang.String" db-attribute-path="facebook_avatar_small"/>
+		<obj-attribute name="facebookSourceId" type="java.lang.String" db-attribute-path="facebook_source_id"/>
+		<obj-attribute name="facebookType" type="java.lang.String" db-attribute-path="facebook_type"/>
+		<obj-attribute name="guestsCanInviteOthers" type="java.lang.Integer" db-attribute-path="guestsCanInviteOthers"/>
+		<obj-attribute name="guestsCanModify" type="java.lang.Integer" db-attribute-path="guestsCanModify"/>
+		<obj-attribute name="guestsCanSeeGuests" type="java.lang.Integer" db-attribute-path="guestsCanSeeGuests"/>
+		<obj-attribute name="hasAlarm" type="java.lang.Integer" db-attribute-path="hasAlarm"/>
+		<obj-attribute name="hasAttendeeData" type="java.lang.Integer" db-attribute-path="hasAttendeeData"/>
+		<obj-attribute name="hasExtendedProperties" type="java.lang.Integer" db-attribute-path="hasExtendedProperties"/>
+		<obj-attribute name="htmlUri" type="java.lang.String" db-attribute-path="htmlUri"/>
+		<obj-attribute name="iCalGUID" type="java.lang.String" db-attribute-path="iCalGUID"/>
+		<obj-attribute name="importance" type="java.lang.Integer" db-attribute-path="importance"/>
+		<obj-attribute name="lastDate" type="java.lang.Integer" db-attribute-path="lastDate"/>
+		<obj-attribute name="lastUpdateTime" type="java.lang.String" db-attribute-path="last_update_time"/>
+		<obj-attribute name="meetingStatus" type="java.lang.Integer" db-attribute-path="MeetingStatus"/>
+		<obj-attribute name="organizer" type="java.lang.String" db-attribute-path="organizer"/>
+		<obj-attribute name="originalAllDay" type="java.lang.Integer" db-attribute-path="originalAllDay"/>
+		<obj-attribute name="originalEvent" type="java.lang.String" db-attribute-path="originalEvent"/>
+		<obj-attribute name="originalInstanceTime" type="java.lang.Integer" db-attribute-path="originalInstanceTime"/>
+		<obj-attribute name="parentID" type="java.lang.Integer" db-attribute-path="parentID"/>
+		<obj-attribute name="rdate" type="java.lang.String" db-attribute-path="rdate"/>
+		<obj-attribute name="rrule" type="java.lang.String" db-attribute-path="rrule"/>
+		<obj-attribute name="selfAttendeeStatus" type="java.lang.Integer" db-attribute-path="selfAttendeeStatus"/>
+		<obj-attribute name="syncAccount" type="java.lang.String" db-attribute-path="_sync_account"/>
+		<obj-attribute name="syncAccountType" type="java.lang.String" db-attribute-path="_sync_account_type"/>
+		<obj-attribute name="syncAdapterData" type="java.lang.String" db-attribute-path="syncAdapterData"/>
+		<obj-attribute name="syncDirty" type="java.lang.Integer" db-attribute-path="_sync_dirty"/>
+		<obj-attribute name="syncId" type="java.lang.String" db-attribute-path="_sync_id"/>
+		<obj-attribute name="syncLocalId" type="java.lang.Integer" db-attribute-path="_sync_local_id"/>
+		<obj-attribute name="syncMark" type="java.lang.Integer" db-attribute-path="_sync_mark"/>
+		<obj-attribute name="syncTime" type="java.lang.String" db-attribute-path="_sync_time"/>
+		<obj-attribute name="syncVersion" type="java.lang.String" db-attribute-path="_sync_version"/>
+		<obj-attribute name="title" type="java.lang.String" db-attribute-path="title"/>
+		<obj-attribute name="transparency" type="java.lang.Integer" db-attribute-path="transparency"/>
+		<obj-attribute name="visibility" type="java.lang.Integer" db-attribute-path="visibility"/>
+	</obj-entity>
+	<obj-entity name="EventsRawTimes" className="com.android.forge.calendar.EventsRawTimes" dbEntityName="EventsRawTimes">
+		<obj-attribute name="dtend2445" type="java.lang.String" db-attribute-path="dtend2445"/>
+		<obj-attribute name="dtstart2445" type="java.lang.String" db-attribute-path="dtstart2445"/>
+		<obj-attribute name="lastDate2445" type="java.lang.String" db-attribute-path="lastDate2445"/>
+		<obj-attribute name="originalInstanceTime2445" type="java.lang.String" db-attribute-path="originalInstanceTime2445"/>
+	</obj-entity>
+	<obj-entity name="ExtendedProperties" className="com.android.forge.calendar.ExtendedProperties" dbEntityName="ExtendedProperties">
+		<obj-attribute name="name" type="java.lang.String" db-attribute-path="name"/>
+		<obj-attribute name="value" type="java.lang.String" db-attribute-path="value"/>
+	</obj-entity>
+	<obj-entity name="Instances" className="com.android.forge.calendar.Instances" dbEntityName="Instances">
+		<obj-attribute name="begin" type="java.lang.Integer" db-attribute-path="begin"/>
+		<obj-attribute name="end" type="java.lang.Integer" db-attribute-path="end"/>
+		<obj-attribute name="endDay" type="java.lang.Integer" db-attribute-path="endDay"/>
+		<obj-attribute name="endMinute" type="java.lang.Integer" db-attribute-path="endMinute"/>
+		<obj-attribute name="startDay" type="java.lang.Integer" db-attribute-path="startDay"/>
+		<obj-attribute name="startMinute" type="java.lang.Integer" db-attribute-path="startMinute"/>
+	</obj-entity>
+	<obj-entity name="Reminders" className="com.android.forge.calendar.Reminders" dbEntityName="Reminders">
+		<obj-attribute name="method" type="java.lang.Integer" db-attribute-path="method"/>
+		<obj-attribute name="minutes" type="java.lang.Integer" db-attribute-path="minutes"/>
+	</obj-entity>
+	<db-relationship name="toEvents" source="Attendees" target="Events" toMany="false">
+		<db-attribute-pair source="event_id" target="_id"/>
+	</db-relationship>
+	<db-relationship name="toEvents" source="CalendarAlerts" target="Events" toMany="false">
+		<db-attribute-pair source="event_id" target="_id"/>
+	</db-relationship>
+	<db-relationship name="toEvents" source="CalendarSmsAlerts" target="Events" toMany="false">
+		<db-attribute-pair source="event_id" target="_id"/>
+	</db-relationship>
+	<db-relationship name="untitledRel" source="Calendars" target="Events" toMany="true">
+		<db-attribute-pair source="_id" target="calendar_id"/>
+	</db-relationship>
+	<db-relationship name="toAttendees" source="Events" target="Attendees" toMany="true">
+		<db-attribute-pair source="_id" target="event_id"/>
+	</db-relationship>
+	<db-relationship name="toCalendarAlerts" source="Events" target="CalendarAlerts" toMany="true">
+		<db-attribute-pair source="_id" target="event_id"/>
+	</db-relationship>
+	<db-relationship name="toCalendarSmsAlerts" source="Events" target="CalendarSmsAlerts" toMany="true">
+		<db-attribute-pair source="_id" target="event_id"/>
+	</db-relationship>
+	<db-relationship name="toCalendars" source="Events" target="Calendars" toMany="false">
+		<db-attribute-pair source="calendar_id" target="_id"/>
+	</db-relationship>
+	<db-relationship name="toEventsRawTimes" source="Events" target="EventsRawTimes" toMany="true">
+		<db-attribute-pair source="_id" target="event_id"/>
+	</db-relationship>
+	<db-relationship name="toExtendedProperties" source="Events" target="ExtendedProperties" toMany="true">
+		<db-attribute-pair source="_id" target="event_id"/>
+	</db-relationship>
+	<db-relationship name="toInstances" source="Events" target="Instances" toMany="true">
+		<db-attribute-pair source="_id" target="event_id"/>
+	</db-relationship>
+	<db-relationship name="toReminders" source="Events" target="Reminders" toMany="true">
+		<db-attribute-pair source="_id" target="event_id"/>
+	</db-relationship>
+	<db-relationship name="toEvents" source="EventsRawTimes" target="Events" toMany="false">
+		<db-attribute-pair source="event_id" target="_id"/>
+	</db-relationship>
+	<db-relationship name="toEvents" source="ExtendedProperties" target="Events" toMany="false">
+		<db-attribute-pair source="event_id" target="_id"/>
+	</db-relationship>
+	<db-relationship name="toEvents" source="Instances" target="Events" toMany="false">
+		<db-attribute-pair source="event_id" target="_id"/>
+	</db-relationship>
+	<db-relationship name="toEvents" source="Reminders" target="Events" toMany="false">
+		<db-attribute-pair source="event_id" target="_id"/>
+	</db-relationship>
+	<obj-relationship name="toEvents" source="Attendees" target="Events" deleteRule="Nullify" db-relationship-path="toEvents"/>
+	<obj-relationship name="toEvents" source="CalendarAlerts" target="Events" deleteRule="Nullify" db-relationship-path="toEvents"/>
+	<obj-relationship name="toEvents" source="CalendarSmsAlerts" target="Events" deleteRule="Nullify" db-relationship-path="toEvents"/>
+	<obj-relationship name="untitledRel" source="Calendars" target="Events" deleteRule="Deny" db-relationship-path="untitledRel"/>
+	<obj-relationship name="toAttendees" source="Events" target="Attendees" deleteRule="Deny" db-relationship-path="toAttendees"/>
+	<obj-relationship name="toCalendarAlerts" source="Events" target="CalendarAlerts" deleteRule="Deny" db-relationship-path="toCalendarAlerts"/>
+	<obj-relationship name="toCalendarSmsAlerts" source="Events" target="CalendarSmsAlerts" deleteRule="Deny" db-relationship-path="toCalendarSmsAlerts"/>
+	<obj-relationship name="toCalendars" source="Events" target="Calendars" deleteRule="Nullify" db-relationship-path="toCalendars"/>
+	<obj-relationship name="toEventsRawTimes" source="Events" target="EventsRawTimes" deleteRule="Deny" db-relationship-path="toEventsRawTimes"/>
+	<obj-relationship name="toExtendedProperties" source="Events" target="ExtendedProperties" deleteRule="Deny" db-relationship-path="toExtendedProperties"/>
+	<obj-relationship name="toInstances" source="Events" target="Instances" deleteRule="Deny" db-relationship-path="toInstances"/>
+	<obj-relationship name="toReminders" source="Events" target="Reminders" deleteRule="Deny" db-relationship-path="toReminders"/>
+	<obj-relationship name="toEvents" source="EventsRawTimes" target="Events" deleteRule="Nullify" db-relationship-path="toEvents"/>
+	<obj-relationship name="toEvents" source="ExtendedProperties" target="Events" deleteRule="Nullify" db-relationship-path="toEvents"/>
+	<obj-relationship name="toEvents" source="Instances" target="Events" deleteRule="Nullify" db-relationship-path="toEvents"/>
+	<obj-relationship name="toEvents" source="Reminders" target="Events" deleteRule="Nullify" db-relationship-path="toEvents"/>
+</data-map>
