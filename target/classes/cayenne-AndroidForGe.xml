@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<domain project-version="6">
+	<map name="calendar"/>
+	<map name="contacts2"/>
+	<map name="randomnames"/>
+
+	<node name="CalendarProvider"
+		 factory="org.apache.cayenne.configuration.server.XMLPoolingDataSourceFactory"
+		 schema-update-strategy="org.apache.cayenne.access.dbsync.CreateIfNoSchemaStrategy"
+		>
+		<map-ref name="calendar"/>
+		<data-source>
+			<driver value="org.sqlite.JDBC"/>
+			<url value="jdbc:sqlite:/C:/Users/benedikt/Dropbox/devel/unversioned/DataGenerator/res/calendar.sqlite"/>
+			<connectionPool min="1" max="1"/>
+			<login/>
+		</data-source>
+	</node>
+	<node name="ContactProvider"
+		 factory="org.apache.cayenne.configuration.server.XMLPoolingDataSourceFactory"
+		 schema-update-strategy="org.apache.cayenne.access.dbsync.CreateIfNoSchemaStrategy"
+		>
+		<map-ref name="contacts2"/>
+		<data-source>
+			<driver value="org.sqlite.JDBC"/>
+			<url value="jdbc:sqlite:/C:/Users/benedikt/Dropbox/devel/unversioned/DataGenerator/res/callLog.sqlite"/>
+			<connectionPool min="1" max="1"/>
+			<login/>
+		</data-source>
+	</node>
+	<node name="Names"
+		 factory="org.apache.cayenne.configuration.server.XMLPoolingDataSourceFactory"
+		 schema-update-strategy="org.apache.cayenne.access.dbsync.CreateIfNoSchemaStrategy"
+		>
+		<map-ref name="randomnames"/>
+		<data-source>
+			<driver value="org.sqlite.JDBC"/>
+			<url value="jdbc:sqlite:/C:/Users/benedikt/Dropbox/devel/unversioned/DataGenerator/bin/randomnames.sqlite"/>
+			<connectionPool min="1" max="1"/>
+			<login/>
+		</data-source>
+	</node>
+</domain>

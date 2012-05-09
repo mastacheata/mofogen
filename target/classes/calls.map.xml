@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data-map xmlns="http://cayenne.apache.org/schema/3.0/modelMap"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:schemaLocation="http://cayenne.apache.org/schema/3.0/modelMap http://cayenne.apache.org/schema/3.0/modelMap.xsd"
+	 project-version="6">
+	<property name="defaultPackage" value="com.android.forge.calls"/>
+	<db-entity name="calls">
+		<db-attribute name="_id" type="INTEGER" isPrimaryKey="true" length="2000000000"/>
+		<db-attribute name="city_id" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="cs_local_uuid" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="cs_timestamp" type="INTEGER" isMandatory="true" length="2000000000"/>
+		<db-attribute name="date" type="INTEGER" length="2000000000"/>
+		<db-attribute name="duration" type="INTEGER" length="2000000000"/>
+		<db-attribute name="name" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="new" type="INTEGER" length="2000000000"/>
+		<db-attribute name="number" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="numberlabel" type="VARCHAR" length="2000000000"/>
+		<db-attribute name="numbertype" type="INTEGER" length="2000000000"/>
+		<db-attribute name="raw_contact_id" type="INTEGER" length="2000000000"/>
+		<db-attribute name="type" type="INTEGER" length="2000000000"/>
+	</db-entity>
+	<obj-entity name="Calls" className="com.android.forge.contacts.Calls" dbEntityName="calls">
+		<obj-attribute name="cityId" type="java.lang.String" db-attribute-path="city_id"/>
+		<obj-attribute name="csLocalUuid" type="java.lang.String" db-attribute-path="cs_local_uuid"/>
+		<obj-attribute name="csTimestamp" type="java.lang.Integer" db-attribute-path="cs_timestamp"/>
+		<obj-attribute name="date" type="java.lang.Integer" db-attribute-path="date"/>
+		<obj-attribute name="duration" type="java.lang.Integer" db-attribute-path="duration"/>
+		<obj-attribute name="name" type="java.lang.String" db-attribute-path="name"/>
+		<obj-attribute name="new" type="java.lang.Integer" db-attribute-path="new"/>
+		<obj-attribute name="number" type="java.lang.String" db-attribute-path="number"/>
+		<obj-attribute name="numberlabel" type="java.lang.String" db-attribute-path="numberlabel"/>
+		<obj-attribute name="numbertype" type="java.lang.Integer" db-attribute-path="numbertype"/>
+		<obj-attribute name="rawContactId" type="java.lang.Integer" db-attribute-path="raw_contact_id"/>
+		<obj-attribute name="type" type="java.lang.Integer" db-attribute-path="type"/>
+	</obj-entity>
+</data-map>
